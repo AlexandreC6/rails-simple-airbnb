@@ -1,3 +1,19 @@
-<% @flats.each do |flat| %>
-  <%= flat.name %>
-<% end %>
+<div class="header">
+  <p><%= link_to "Add a page", new_flat_path(@flat) %></p>
+</div>
+
+<div class="cards">
+  <% @flats.each do |flat| %>
+    <div class="card">
+    <div class="header">
+      <p><%= flat.name %> </p>
+      <p><%= flat.address %></p>
+      <p><i class="fa-solid fa-user-group"></i><%= flat.number_of_guests %></p>
+      <p><i class="fa-solid fa-euro-sign"></i><%= flat.price_per_night %></p>
+    </div>
+      <div class="footer">
+        <%= link_to "More info", flat_path(flat) %>
+      </div>
+    </div>
+  <% end %>
+</div>

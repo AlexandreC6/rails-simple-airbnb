@@ -1,5 +1,17 @@
 class FlatsController < ApplicationController
   def index
-    @flats = Flats.all
+    @flats = Flat.all
+  end
+
+  def show
+    @flat = Flat.find(params[:id])
+  end
+
+  def new
+    @flat = Flat.new
+  end
+
+  def create
+
   end
 end

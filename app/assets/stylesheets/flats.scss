@@ -1,3 +1,44 @@
 // Place all the styles related to the flats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+}
+
+.card {
+  border: 0.5px solid black;
+  box-shadow: 7px 5px 5px #FDF6EC;
+}
+
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  background: #FBF8F1;
+  padding: 18px;
+}
+
+input {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.flat_form h1 {
+  text-align: center;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+}
